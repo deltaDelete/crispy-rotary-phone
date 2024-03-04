@@ -77,7 +77,7 @@ public class CityController : ControllerBase
 
         db.Cities.Update(entity);
         await db.SaveChangesAsync();
-        return Ok();
+        return Ok(entity);
     }
 
     private const string AlreadyPresent = "Запись уже существует";
